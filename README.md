@@ -508,7 +508,7 @@ UICorner_26.Parent = Frame
 
 -- Scripts:
 
-local function NENXU_fake_script() -- TextBox.LocalScript 
+local function DBGS_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local currentid=""
@@ -541,7 +541,7 @@ local function NENXU_fake_script() -- TextBox.LocalScript
 			_G.NetFix=" "
 			game:service'RunService'.Heartbeat:Connect(function()
 				for i,v in pairs(_G.tov) do
-					v[1].Velocity=Vector3.new(1e2,0,0)
+					v[1].Velocity=Vector3.new(2e2,0,0)
 					v[1].CFrame=v[2].CFrame
 				end
 			end)
@@ -652,17 +652,6 @@ local function NENXU_fake_script() -- TextBox.LocalScript
 				end
 			end
 		end)
-
-		local function Encrypt(AssetId)
-			local s, Encrypted = pcall(game.HttpGet, game, ('https://riptxde.dev/anti-logger-v2.php/?mode=true&id=' .. HttpService:UrlEncode(AssetId)))
-			CustomMessage = "Suck My Dick"
-			if s then
-				Encrypted = Encrypted:gsub('    ', ' ' .. CustomMessage:gsub('%%', '%%%%') .. ' ')
-				return Encrypted
-			end
-			return s
-		end
-
 		local RenderStepped = game:GetService('RunService').RenderStepped
 		local Wait = RenderStepped.Wait
 		local Selected=CurrentSound
@@ -682,11 +671,11 @@ local function NENXU_fake_script() -- TextBox.LocalScript
 		end
 		local function VectorFromSettings(angle,str)
 			if str=="X" then
-				return Vector3.new(angle,20,0)
+				return Vector3.new(angle,0,0)
 			elseif str=="Y" then
 				return Vector3.new(0,angle,0)
 			elseif str=="Z" then
-				return Vector3.new(0,10,angle)
+				return Vector3.new(0,0,angle)
 			end
 		end
 		dont=0
@@ -699,19 +688,19 @@ local function NENXU_fake_script() -- TextBox.LocalScript
 						if CurrentSound then
 							local Volume = CurrentSound['PlaybackLoudness']
 							local Iterator=math.rad(Spin+(K*(360/#Visualizer)))
-							local Z = _G.Distance + Volume / (1 ~= 15 and (15 - 1) or .0015)
+							local Z = _G.Distance + Volume / (1 ~= 100 and (100 - 1) or .01)
 							local G =  Volume / (35 ~= 100 and (100 - 35) or .01)
 							local P = CFrame.new(Root['Position']) * AngleFromSettings(Iterator,_G.VisAngle) * CFrame.new(0,0,Z)
 							local AddVector =Vector3.new(0,0,0)
 							if _G.WavesOn == "On" then
-								AddVector=VectorFromSettings(math.sin((((dt*_G.WaveInt)+(K/#Visualizer)*(math.pi*60)))),_G.WavesAngle)
+								AddVector=VectorFromSettings(math.sin((((dt*_G.WaveInt)+(K/#Visualizer)*(math.pi*2)))),_G.WavesAngle)
 							end
 							V['Position'] = P.p+AddVector
 							V['Rotation'] = CF2V(CFrame.new(V.Position, Root['Position'] + Vector3.new(0, G, 0)))
 						end
 						Spin+=_G.Speed
 						game:service'RunService'.RenderStepped:Wait()
-					until Stopped or ((Spin >= 360))
+					until Stopped or ((Spin >= 360)) 
 				until Stopped
 				ccc:Disconnect()
 			end)()
@@ -721,8 +710,8 @@ local function NENXU_fake_script() -- TextBox.LocalScript
 		vis(script.Parent.Parent.AudioId.Text:gsub("%D+", ""),0)
 	end)
 end
-coroutine.wrap(NENXU_fake_script)()
-local function TAIQ_fake_script() -- TextBox_2.LocalScript 
+coroutine.wrap(DBGS_fake_script)()
+local function YUCXPRS_fake_script() -- TextBox_2.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -762,8 +751,8 @@ local function TAIQ_fake_script() -- TextBox_2.LocalScript
 		print("done")
 	end)
 end
-coroutine.wrap(TAIQ_fake_script)()
-local function LYJJVGG_fake_script() -- MAX.LocalScript 
+coroutine.wrap(YUCXPRS_fake_script)()
+local function UTKJKGJ_fake_script() -- MAX.LocalScript 
 	local script = Instance.new('LocalScript', MAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -779,8 +768,8 @@ local function LYJJVGG_fake_script() -- MAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(LYJJVGG_fake_script)()
-local function NGUJZD_fake_script() -- MAY.LocalScript 
+coroutine.wrap(UTKJKGJ_fake_script)()
+local function TFNVJA_fake_script() -- MAY.LocalScript 
 	local script = Instance.new('LocalScript', MAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -796,8 +785,8 @@ local function NGUJZD_fake_script() -- MAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(NGUJZD_fake_script)()
-local function MFZOIYS_fake_script() -- MAZ.LocalScript 
+coroutine.wrap(TFNVJA_fake_script)()
+local function OZTLZI_fake_script() -- MAZ.LocalScript 
 	local script = Instance.new('LocalScript', MAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -813,8 +802,8 @@ local function MFZOIYS_fake_script() -- MAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(MFZOIYS_fake_script)()
-local function CUZCZX_fake_script() -- WAX.LocalScript 
+coroutine.wrap(OZTLZI_fake_script)()
+local function JDOBGR_fake_script() -- WAX.LocalScript 
 	local script = Instance.new('LocalScript', WAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -830,8 +819,8 @@ local function CUZCZX_fake_script() -- WAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(CUZCZX_fake_script)()
-local function YZGIMEZ_fake_script() -- WAY.LocalScript 
+coroutine.wrap(JDOBGR_fake_script)()
+local function DCNSPIX_fake_script() -- WAY.LocalScript 
 	local script = Instance.new('LocalScript', WAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -847,8 +836,8 @@ local function YZGIMEZ_fake_script() -- WAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(YZGIMEZ_fake_script)()
-local function VCULM_fake_script() -- WAZ.LocalScript 
+coroutine.wrap(DCNSPIX_fake_script)()
+local function DZJU_fake_script() -- WAZ.LocalScript 
 	local script = Instance.new('LocalScript', WAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -864,8 +853,8 @@ local function VCULM_fake_script() -- WAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(VCULM_fake_script)()
-local function LNAF_fake_script() -- WavesOn.LocalScript 
+coroutine.wrap(DZJU_fake_script)()
+local function UMKP_fake_script() -- WavesOn.LocalScript 
 	local script = Instance.new('LocalScript', WavesOn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -877,14 +866,14 @@ local function LNAF_fake_script() -- WavesOn.LocalScript
 	end)
 	while wait() do
 		if script.Parent.Name=="Waves"..tostring(_G.WavesOn) then
-			script.Parent.BackgroundColor3=Color3.fromRGB(140, 0, 255)
+			script.Parent.BackgroundColor3=Color3.fromRGB(255, 255, 127)
 		else
 			script.Parent.BackgroundColor3=Color3.fromRGB(31,31,31)
 		end
 	end 
 end
-coroutine.wrap(LNAF_fake_script)()
-local function TYMFFE_fake_script() -- Distance.LocalScript 
+coroutine.wrap(UMKP_fake_script)()
+local function GKDLP_fake_script() -- Distance.LocalScript 
 	local script = Instance.new('LocalScript', Distance)
 
 	_G[script.Parent.Name]=5
@@ -894,8 +883,8 @@ local function TYMFFE_fake_script() -- Distance.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TYMFFE_fake_script)()
-local function YBCWU_fake_script() -- WaveInt.LocalScript 
+coroutine.wrap(GKDLP_fake_script)()
+local function WNBNQ_fake_script() -- WaveInt.LocalScript 
 	local script = Instance.new('LocalScript', WaveInt)
 
 	_G[script.Parent.Name]=3
@@ -905,8 +894,8 @@ local function YBCWU_fake_script() -- WaveInt.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YBCWU_fake_script)()
-local function BUFKA_fake_script() -- Speed.LocalScript 
+coroutine.wrap(WNBNQ_fake_script)()
+local function WYFU_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	_G[script.Parent.Name]=1
@@ -916,8 +905,8 @@ local function BUFKA_fake_script() -- Speed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BUFKA_fake_script)()
-local function TCVROSZ_fake_script() -- Frame.LocalScript 
+coroutine.wrap(WYFU_fake_script)()
+local function MDGLVEO_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	_G.VisAngle="X"
@@ -925,8 +914,8 @@ local function TCVROSZ_fake_script() -- Frame.LocalScript
 	_G.WavesAngle="Y"
 	_G.BoomboxDependantSpeed="Off"
 end
-coroutine.wrap(TCVROSZ_fake_script)()
-local function OLOXKA_fake_script() -- Frame.Dragify 
+coroutine.wrap(MDGLVEO_fake_script)()
+local function JZFN_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -967,8 +956,8 @@ local function OLOXKA_fake_script() -- Frame.Dragify
 
 	dragify(script.Parent)
 end
-coroutine.wrap(OLOXKA_fake_script)()
-local function AKUC_fake_script() -- TextBox_3.LocalScript 
+coroutine.wrap(JZFN_fake_script)()
+local function CIGR_fake_script() -- TextBox_3.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1005,8 +994,8 @@ local function AKUC_fake_script() -- TextBox_3.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(AKUC_fake_script)()
-local function MYBC_fake_script() -- TextBox_4.LocalScript 
+coroutine.wrap(CIGR_fake_script)()
+local function KOHXP_fake_script() -- TextBox_4.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_4)
 
 	_G.grabtools=false
@@ -1026,7 +1015,7 @@ local function MYBC_fake_script() -- TextBox_4.LocalScript
 		while wait() do
 			if _G.grabtools==true then
 				script.Parent.TextColor3=Color3.fromRGB(53, 53, 53)
-				script.Parent.BackgroundColor3=Color3.fromRGB(140, 0, 255)
+				script.Parent.BackgroundColor3=Color3.fromRGB(255, 255, 127)
 			else
 				script.Parent.TextColor3=Color3.fromRGB(255,255,255)
 				script.Parent.BackgroundColor3=Color3.fromRGB(20, 20, 20)
@@ -1037,8 +1026,8 @@ local function MYBC_fake_script() -- TextBox_4.LocalScript
 		_G.grabtools=not _G.grabtools
 	end)
 end
-coroutine.wrap(MYBC_fake_script)()
-local function HENKWL_fake_script() -- TextBox_5.LocalScript 
+coroutine.wrap(KOHXP_fake_script)()
+local function LPDFVEO_fake_script() -- TextBox_5.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1056,4 +1045,4 @@ local function HENKWL_fake_script() -- TextBox_5.LocalScript
 		end))
 	end)
 end
-coroutine.wrap(HENKWL_fake_script)()
+coroutine.wrap(LPDFVEO_fake_script)()
